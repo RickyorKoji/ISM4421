@@ -1,13 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <circle cx="50" cy="50" r="48" fill="#003366" stroke="#CC0000" stroke-width="4"/>
-  <g fill="#ffffff">
-    <path d="M28 30 L36 16 L42 32 Z"/>
-    <path d="M72 30 L64 16 L58 32 Z"/>
-    <ellipse cx="50" cy="58" rx="24" ry="22"/>
-  </g>
-  <g fill="#003366">
-    <circle cx="40" cy="54" r="9"/>
-    <circle cx="60" cy="54" r="9"/>
-  </g>
-  <path d="M50 60 L46 68 L54 68 Z" fill="#CC0000"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-labelledby="title">
+  <title id="title">FAU Owls Weather mark: a simple owl badge in navy and red</title>
+  <circle cx="50" cy="50" r="47" fill="#003366" stroke="#CC0000" stroke-width="3"/>
+  <path d="M30,33 L21,13 L40,27 Z" fill="#ffffff"/>
+  <path d="M70,33 L79,13 L60,27 Z" fill="#ffffff"/>
+  <ellipse cx="50" cy="58" rx="26" ry="24" fill="#ffffff"/>
+  <circle cx="38" cy="55" r="11" fill="#ffffff" stroke="#003366" stroke-width="2.5"/>
+  <circle cx="62" cy="55" r="11" fill="#ffffff" stroke="#003366" stroke-width="2.5"/>
+  <circle cx="38" cy="55" r="5.5" fill="#003366"/>
+  <circle cx="62" cy="55" r="5.5" fill="#003366"/>
+  <circle cx="36" cy="53" r="1.4" fill="#ffffff"/>
+  <circle cx="60" cy="53" r="1.4" fill="#ffffff"/>
+  <path d="M50,61 L45,70 L55,70 Z" fill="#CC0000"/>
 </svg>

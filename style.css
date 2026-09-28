@@ -1,14 +1,19 @@
 :root {
   --fau-blue: #003366;
   --fau-blue-dark: #001f3f;
+  --fau-blue-light: #7fb3e8;
   --fau-red: #cc0000;
   --fau-red-dark: #a30000;
+  --fau-red-light: #ff6b6b;
   --fau-white: #ffffff;
-  --fau-sand: #f4f6f9;
-  --text-primary: #1a1a1a;
-  --text-muted: #5b6774;
+  --bg-page: #00111f;
+  --bg-card: #0b2540;
+  --bg-card-alt: #0f2e4e;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --text-primary: #eef3f9;
+  --text-muted: #93a9c2;
   --card-radius: 14px;
-  --shadow: 0 4px 16px rgba(0, 51, 102, 0.12);
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
   --max-width: 960px;
 }
 
@@ -24,7 +29,7 @@ body {
 
 body {
   font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  background: var(--fau-sand);
+  background: var(--bg-page);
   color: var(--text-primary);
   min-height: 100vh;
   display: flex;
@@ -32,7 +37,7 @@ body {
 }
 
 a {
-  color: var(--fau-red);
+  color: var(--fau-red-light);
 }
 
 /* Header */
@@ -92,13 +97,20 @@ a {
 .search-form input {
   padding: 0.55rem 0.9rem;
   border-radius: 999px;
-  border: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--fau-white);
   min-width: 200px;
   font-size: 0.95rem;
 }
 
+.search-form input::placeholder {
+  color: #cdd9e6;
+}
+
 .search-form input:focus {
   outline: 3px solid var(--fau-red);
+  background: rgba(255, 255, 255, 0.16);
 }
 
 .btn {
@@ -144,9 +156,9 @@ main {
 }
 
 .status-banner {
-  background: #fff4f4;
+  background: rgba(204, 0, 0, 0.15);
   border: 1px solid var(--fau-red);
-  color: var(--fau-red-dark);
+  color: var(--fau-red-light);
   padding: 0.75rem 1rem;
   border-radius: var(--card-radius);
   margin-bottom: 1.25rem;
@@ -154,7 +166,8 @@ main {
 }
 
 .card {
-  background: var(--fau-white);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
   border-radius: var(--card-radius);
   box-shadow: var(--shadow);
   padding: 1.5rem;
@@ -173,7 +186,7 @@ main {
 .location-block h1 {
   margin: 0 0 0.25rem;
   font-size: 1.6rem;
-  color: var(--fau-blue);
+  color: var(--fau-blue-light);
 }
 
 .muted {
@@ -195,13 +208,13 @@ main {
 .current-temp {
   font-size: 3.25rem;
   font-weight: 700;
-  color: var(--fau-blue);
+  color: var(--fau-blue-light);
 }
 
 .current-desc {
   font-size: 1.05rem;
   font-weight: 600;
-  color: var(--fau-red);
+  color: var(--fau-red-light);
   margin: 0.75rem 0 1.25rem;
 }
 
@@ -209,7 +222,7 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
   gap: 1rem;
-  border-top: 1px solid #e6ebf1;
+  border-top: 1px solid var(--border-subtle);
   padding-top: 1.25rem;
 }
 
@@ -229,12 +242,12 @@ main {
 .stat-value {
   font-size: 1.1rem;
   font-weight: 700;
-  color: var(--fau-blue);
+  color: var(--fau-blue-light);
 }
 
 /* Hourly */
 h2 {
-  color: var(--fau-blue);
+  color: var(--fau-blue-light);
   font-size: 1.15rem;
   margin: 0 0 1rem;
 }
@@ -249,11 +262,11 @@ h2 {
 .hour-card {
   flex: 0 0 auto;
   min-width: 76px;
-  background: var(--fau-sand);
+  background: var(--bg-card-alt);
   border-radius: 10px;
   padding: 0.75rem 0.5rem;
   text-align: center;
-  border: 1px solid #e6ebf1;
+  border: 1px solid var(--border-subtle);
 }
 
 .hour-card .hour-time {
@@ -269,7 +282,7 @@ h2 {
 
 .hour-card .hour-temp {
   font-weight: 700;
-  color: var(--fau-blue);
+  color: var(--fau-blue-light);
 }
 
 /* Daily */
@@ -289,12 +302,12 @@ h2 {
 }
 
 .day-row:nth-child(odd) {
-  background: var(--fau-sand);
+  background: var(--bg-card-alt);
 }
 
 .day-name {
   font-weight: 700;
-  color: var(--fau-blue);
+  color: var(--fau-blue-light);
 }
 
 .day-desc {
@@ -309,6 +322,7 @@ h2 {
 .day-temps {
   font-weight: 700;
   white-space: nowrap;
+  color: var(--text-primary);
 }
 
 .day-temps .low {
@@ -323,8 +337,8 @@ h2 {
   padding: 1.25rem;
   font-size: 0.8rem;
   color: var(--text-muted);
-  background: var(--fau-white);
-  border-top: 3px solid var(--fau-blue);
+  background: var(--bg-card);
+  border-top: 3px solid var(--fau-red);
 }
 
 @media (max-width: 600px) {

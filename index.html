@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAU Owls Weather | Boca Raton</title>
+  <meta name="description" content="Live weather for Florida Atlantic University and Boca Raton, powered by Open-Meteo." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://api.open-meteo.com" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <img src="assets/fau-owl-logo.svg" alt="FAU Owls logo" class="brand-logo" />
+        <div class="brand-text">
+          <span class="brand-title">FAU Owls Weather</span>
+          <span class="brand-subtitle">Florida Atlantic University &middot; Boca Raton, FL</span>
+        </div>
+      </div>
+      <form id="search-form" class="search-form" autocomplete="off">
+        <input
+          id="search-input"
+          type="text"
+          name="location"
+          placeholder="Search a city (e.g. Boca Raton)"
+          aria-label="Search for a city"
+        />
+        <button type="submit" class="btn btn-secondary">Search</button>
+        <button type="button" id="locate-btn" class="btn btn-ghost" title="Use my current location">
+          📍 My Location
+        </button>
+      </form>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section id="status-banner" class="status-banner" hidden></section>
+
+    <section class="current-weather card" id="current-weather" aria-live="polite">
+      <div class="current-top">
+        <div class="location-block">
+          <h1 id="location-name">Boca Raton, FL</h1>
+          <p id="location-updated" class="muted">Loading current conditions&hellip;</p>
+        </div>
+        <div class="temp-block">
+          <span id="current-icon" class="weather-icon" aria-hidden="true">🦉</span>
+          <span id="current-temp" class="current-temp">--&deg;</span>
+        </div>
+      </div>
+      <p id="current-desc" class="current-desc">&nbsp;</p>
+      <div class="current-stats" id="current-stats">
+        <div class="stat">
+          <span class="stat-label">Feels Like</span>
+          <span class="stat-value" id="stat-feels">--&deg;</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Humidity</span>
+          <span class="stat-value" id="stat-humidity">--%</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Wind</span>
+          <span class="stat-value" id="stat-wind">-- mph</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Precip Today</span>
+          <span class="stat-value" id="stat-precip">--%</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Sunrise</span>
+          <span class="stat-value" id="stat-sunrise">--:--</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Sunset</span>
+          <span class="stat-value" id="stat-sunset">--:--</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="hourly-section card">
+      <h2>Next 24 Hours</h2>
+      <div id="hourly-scroll" class="hourly-scroll" aria-label="Hourly forecast"></div>
+    </section>
+
+    <section class="daily-section card">
+      <h2>7-Day Forecast</h2>
+      <div id="daily-list" class="daily-list" aria-label="7-day forecast"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Go Owls! 🦉 Weather data from
+      <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo</a>
+      (free, no API key required). Not an official Florida Atlantic University website.
+    </p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

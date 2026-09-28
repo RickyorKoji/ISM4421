@@ -1,66 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-labelledby="title desc">
-  <title id="title">FAU Owls Weather mark</title>
-  <desc id="desc">A stylized crest badge with a determined owl mascot in Florida Atlantic University navy and red.</desc>
-  <defs>
-    <radialGradient id="badgeGrad" cx="35%" cy="28%" r="80%">
-      <stop offset="0%" stop-color="#0d5591"/>
-      <stop offset="65%" stop-color="#003366"/>
-      <stop offset="100%" stop-color="#001f3f"/>
-    </radialGradient>
-  </defs>
-
-  <!-- Badge background -->
-  <circle cx="100" cy="100" r="96" fill="url(#badgeGrad)" stroke="#CC0000" stroke-width="6"/>
-  <circle cx="100" cy="100" r="88" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.25"/>
-
-  <!-- Ear tufts: rounded feather tufts, angled outward -->
-  <path d="M52,62 C40,56 30,40 32,18 C46,20 62,32 68,50 C64,56 58,60 52,62 Z" fill="#001f3f" stroke="#ffffff" stroke-width="2"/>
-  <path d="M148,62 C160,56 170,40 168,18 C154,20 138,32 132,50 C136,56 142,60 148,62 Z" fill="#001f3f" stroke="#ffffff" stroke-width="2"/>
-
-  <!-- Folded wings (peek out from behind the body) -->
-  <path d="M56,82 C34,92 24,116 30,146 C36,140 46,132 48,116 C50,102 54,90 62,82 C60,80 58,80 56,82 Z" fill="#001f3f" stroke="#ffffff" stroke-width="2.5"/>
-  <path d="M144,82 C166,92 176,116 170,146 C164,140 154,132 152,116 C150,102 146,90 138,82 C140,80 142,80 144,82 Z" fill="#001f3f" stroke="#ffffff" stroke-width="2.5"/>
-
-  <!-- Body / head shield -->
-  <path d="M100,44
-    C130,44 152,66 154,96
-    C156,126 148,154 126,168
-    C114,175 86,175 74,168
-    C52,154 44,126 46,96
-    C48,66 70,44 100,44 Z" fill="#ffffff" stroke="#001f3f" stroke-width="4"/>
-
-  <!-- Facial discs -->
-  <ellipse cx="79" cy="90" rx="31" ry="35" fill="#eef2f7"/>
-  <ellipse cx="121" cy="90" rx="31" ry="35" fill="#eef2f7"/>
-
-  <!-- Eyebrows (tapered, determined look) -->
-  <path d="M54,64 C64,58 76,55 88,57 L88,64 C77,63 66,65 57,71 Z" fill="#001f3f"/>
-  <path d="M146,64 C136,58 124,55 112,57 L112,64 C123,63 134,65 143,71 Z" fill="#001f3f"/>
-
-  <!-- Eyes -->
-  <g>
-    <circle cx="79" cy="94" r="23" fill="#ffffff" stroke="#001f3f" stroke-width="3"/>
-    <circle cx="79" cy="94" r="13" fill="#003366"/>
-    <circle cx="79" cy="94" r="6.5" fill="#0a0a0a"/>
-    <circle cx="74.5" cy="88.5" r="2.6" fill="#ffffff"/>
-  </g>
-  <g>
-    <circle cx="121" cy="94" r="23" fill="#ffffff" stroke="#001f3f" stroke-width="3"/>
-    <circle cx="121" cy="94" r="13" fill="#003366"/>
-    <circle cx="121" cy="94" r="6.5" fill="#0a0a0a"/>
-    <circle cx="125.5" cy="88.5" r="2.6" fill="#ffffff"/>
-  </g>
-
-  <!-- Beak: hooked triangular shape -->
-  <path d="M100,109
-    C95,109 91,114 92,120
-    C93,127 97,131 100,134
-    C103,131 107,127 108,120
-    C109,114 105,109 100,109 Z" fill="#CC0000" stroke="#8a0000" stroke-width="1.5"/>
-  <path d="M100,113 L100,127" stroke="#8a0000" stroke-width="1.2" stroke-linecap="round" opacity="0.6"/>
-
-  <!-- Chest feather texture -->
-  <path d="M68,132 Q100,143 132,132" fill="none" stroke="#c7d2de" stroke-width="3.5" stroke-linecap="round"/>
-  <path d="M66,147 Q100,161 134,147" fill="none" stroke="#c7d2de" stroke-width="3.5" stroke-linecap="round"/>
-  <path d="M70,161 Q100,173 130,161" fill="none" stroke="#c7d2de" stroke-width="3.5" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-labelledby="title">
+  <title id="title">FAU Owls Weather mark: a simple owl badge in navy and red</title>
+  <circle cx="50" cy="50" r="47" fill="#003366" stroke="#CC0000" stroke-width="3"/>
+  <path d="M30,33 L21,13 L40,27 Z" fill="#ffffff"/>
+  <path d="M70,33 L79,13 L60,27 Z" fill="#ffffff"/>
+  <ellipse cx="50" cy="58" rx="26" ry="24" fill="#ffffff"/>
+  <circle cx="38" cy="55" r="11" fill="#ffffff" stroke="#003366" stroke-width="2.5"/>
+  <circle cx="62" cy="55" r="11" fill="#ffffff" stroke="#003366" stroke-width="2.5"/>
+  <circle cx="38" cy="55" r="5.5" fill="#003366"/>
+  <circle cx="62" cy="55" r="5.5" fill="#003366"/>
+  <circle cx="36" cy="53" r="1.4" fill="#ffffff"/>
+  <circle cx="60" cy="53" r="1.4" fill="#ffffff"/>
+  <path d="M50,61 L45,70 L55,70 Z" fill="#CC0000"/>
 </svg>

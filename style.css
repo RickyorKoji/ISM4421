@@ -1,0 +1,342 @@
+:root {
+  --fau-blue: #003366;
+  --fau-blue-dark: #001f3f;
+  --fau-red: #cc0000;
+  --fau-red-dark: #a30000;
+  --fau-white: #ffffff;
+  --fau-sand: #f4f6f9;
+  --text-primary: #1a1a1a;
+  --text-muted: #5b6774;
+  --card-radius: 14px;
+  --shadow: 0 4px 16px rgba(0, 51, 102, 0.12);
+  --max-width: 960px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--fau-sand);
+  color: var(--text-primary);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: var(--fau-red);
+}
+
+/* Header */
+.site-header {
+  background: linear-gradient(135deg, var(--fau-blue) 0%, var(--fau-blue-dark) 100%);
+  color: var(--fau-white);
+  border-bottom: 4px solid var(--fau-red);
+  box-shadow: var(--shadow);
+}
+
+.header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.brand-logo {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.brand-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.brand-subtitle {
+  font-size: 0.8rem;
+  color: #cdd9e6;
+}
+
+.search-form {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.search-form input {
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  border: none;
+  min-width: 200px;
+  font-size: 0.95rem;
+}
+
+.search-form input:focus {
+  outline: 3px solid var(--fau-red);
+}
+
+.btn {
+  border: none;
+  border-radius: 999px;
+  padding: 0.55rem 1.1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.1s ease, background 0.15s ease;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn-secondary {
+  background: var(--fau-red);
+  color: var(--fau-white);
+}
+
+.btn-secondary:hover {
+  background: var(--fau-red-dark);
+}
+
+.btn-ghost {
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--fau-white);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.24);
+}
+
+/* Main */
+main {
+  flex: 1;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 3rem;
+  width: 100%;
+}
+
+.status-banner {
+  background: #fff4f4;
+  border: 1px solid var(--fau-red);
+  color: var(--fau-red-dark);
+  padding: 0.75rem 1rem;
+  border-radius: var(--card-radius);
+  margin-bottom: 1.25rem;
+  font-size: 0.9rem;
+}
+
+.card {
+  background: var(--fau-white);
+  border-radius: var(--card-radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Current weather */
+.current-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.location-block h1 {
+  margin: 0 0 0.25rem;
+  font-size: 1.6rem;
+  color: var(--fau-blue);
+}
+
+.muted {
+  color: var(--text-muted);
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.temp-block {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.weather-icon {
+  font-size: 2.75rem;
+}
+
+.current-temp {
+  font-size: 3.25rem;
+  font-weight: 700;
+  color: var(--fau-blue);
+}
+
+.current-desc {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--fau-red);
+  margin: 0.75rem 0 1.25rem;
+}
+
+.current-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 1rem;
+  border-top: 1px solid #e6ebf1;
+  padding-top: 1.25rem;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+}
+
+.stat-value {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--fau-blue);
+}
+
+/* Hourly */
+h2 {
+  color: var(--fau-blue);
+  font-size: 1.15rem;
+  margin: 0 0 1rem;
+}
+
+.hourly-scroll {
+  display: flex;
+  gap: 0.75rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
+
+.hour-card {
+  flex: 0 0 auto;
+  min-width: 76px;
+  background: var(--fau-sand);
+  border-radius: 10px;
+  padding: 0.75rem 0.5rem;
+  text-align: center;
+  border: 1px solid #e6ebf1;
+}
+
+.hour-card .hour-time {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.hour-card .hour-icon {
+  font-size: 1.5rem;
+  margin: 0.35rem 0;
+}
+
+.hour-card .hour-temp {
+  font-weight: 700;
+  color: var(--fau-blue);
+}
+
+/* Daily */
+.daily-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.day-row {
+  display: grid;
+  grid-template-columns: 90px 1fr auto auto;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 0.5rem;
+  border-radius: 10px;
+}
+
+.day-row:nth-child(odd) {
+  background: var(--fau-sand);
+}
+
+.day-name {
+  font-weight: 700;
+  color: var(--fau-blue);
+}
+
+.day-desc {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.day-icon {
+  font-size: 1.35rem;
+}
+
+.day-temps {
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.day-temps .low {
+  color: var(--text-muted);
+  font-weight: 500;
+  margin-left: 0.4rem;
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: 1.25rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  background: var(--fau-white);
+  border-top: 3px solid var(--fau-blue);
+}
+
+@media (max-width: 600px) {
+  .current-top {
+    flex-direction: column;
+  }
+
+  .day-row {
+    grid-template-columns: 70px 1fr auto;
+  }
+
+  .day-desc {
+    display: none;
+  }
+}
